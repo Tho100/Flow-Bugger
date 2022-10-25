@@ -1,0 +1,15 @@
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\bin\Debug\Flow Bugger.exe.config
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\bin\Debug\Flow Bugger.exe
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\bin\Debug\Flow Bugger.pdb
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\bin\Debug\Guna.UI2.dll
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.csproj.AssemblyReference.cache
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.csproj.SuggestedBindingRedirects.cache
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow_Bugger.Form1.resources
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow_Bugger.Properties.Resources.resources
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.csproj.GenerateResource.cache
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.csproj.CopyComplete
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.exe
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.pdb
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow_Bugger.BugReport.resources
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow_Bugger.codeDetails.resources
