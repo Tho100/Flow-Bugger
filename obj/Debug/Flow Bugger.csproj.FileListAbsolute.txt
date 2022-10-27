@@ -13,3 +13,4 @@ C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.exe
 C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow Bugger.pdb
 C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow_Bugger.BugReport.resources
 C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow_Bugger.codeDetails.resources
+C:\Users\USER\source\repos\Flow Bugger\Flow Bugger\obj\Debug\Flow_Bugger.remIsForm.resources

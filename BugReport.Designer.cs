@@ -359,6 +359,7 @@
             this.guna2Button13.Size = new System.Drawing.Size(77, 23);
             this.guna2Button13.TabIndex = 18;
             this.guna2Button13.Text = "Minor";
+            this.guna2Button13.Click += new System.EventHandler(this.guna2Button13_Click);
             // 
             // guna2Button15
             // 

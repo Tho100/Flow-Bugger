@@ -131,6 +131,7 @@ namespace Flow_Bugger {
 
         int curr = 0;
         int widthPan = 400;
+
         private void guna2Button8_Click(object sender, EventArgs e) {
             try {
 
@@ -140,9 +141,9 @@ namespace Flow_Bugger {
                 if (lenSev > 0) {
                     if(lenPri > 0) {
                         guna2Panel5.Visible = false;
-                        if (guna2TextBox1.Text.Length >= 18) {
-                            widthPan = ((260 + guna2TextBox1.Text.Length) * 2) - (guna2TextBox1.Text.Length + 95);
-                        }
+                        //if (guna2TextBox1.Text.Length >= 18) {
+                        //    widthPan = ((260 + guna2TextBox1.Text.Length) * 2) - (guna2TextBox1.Text.Length + 95);
+                        //}
                         curr++;
                         int top = 275;
                         int h_p = 100;
@@ -169,19 +170,23 @@ namespace Flow_Bugger {
                         titleLab.ForeColor = Color.White;
                         titleLab.Location = new Point(10, 10);
                         titleLab.Text = getTitle;
-                        titleLab.Width = 500;
+                        titleLab.MaximumSize = new Size(350,0);
+                        titleLab.AutoSize = true;
                         titleLab.Visible = true;
                         titleLab.Enabled = true;
+
+                        var checkTitleLength = (getTitle.Length >= 28 ? 56 : 35);
+                        var setHeight = (checkTitleLength == 56 ? 81 : 120);
 
                         Label subLab = new Label();
                         getPanel.Controls.Add(subLab);
                         subLab.Name = "subLab" + curr;
                         subLab.Font = new Font("Segoe UI Semibold", 10, FontStyle.Regular);
                         subLab.ForeColor = Color.LightGray;
-                        subLab.Location = new Point(12, 35);
+                        subLab.Location = new Point(12, checkTitleLength);//35
                         subLab.Text = guna2TextBox2.Text;
                         subLab.Width = widthPan - 13;
-                        subLab.Height = 120;
+                        subLab.Height = setHeight;//120;
                         subLab.Visible = true;
                         subLab.Enabled = true;
 
@@ -223,17 +228,54 @@ namespace Flow_Bugger {
                         dateBut.Visible = true;
                         dateBut.Enabled = true;
 
-                        Guna2CheckBox checkBox = new Guna2CheckBox();
-                        /*getPanel.Controls.Add(checkBox);
-                        checkBox.Name = "checkBox" + curr;
-                        checkBox.Location = new Point(250,200);
-                        checkBox.BackColor = ColorTranslator.FromHtml("#121212");
-                        checkBox.UncheckedState.FillColor = ColorTranslator.FromHtml("#191919");
-                        checkBox.UncheckedState.BorderColor = ColorTranslator.FromHtml("#191919");
-                        checkBox.Animated = true;
-                        checkBox.Text = String.Empty;
-                        //checkBox.Enabled = true;
-                        //checkBox.Visible = true;*/
+                        Guna2Button procBut = new Guna2Button();
+                        getPanel.Controls.Add(procBut);
+                        procBut.Name = "procBut" + curr;
+                        procBut.FillColor = ColorTranslator.FromHtml("#3498db");
+                        procBut.ForeColor = ColorTranslator.FromHtml("#1746d1");
+                        procBut.Font = new Font("Segoe UI Semibold", 9);
+                        procBut.Location = new Point(252, 173);
+                        procBut.Text = "In-Progress";
+                        procBut.BorderRadius = 10;
+                        procBut.BorderColor = ColorTranslator.FromHtml("#1730d1");
+                        procBut.Width = 88;
+                        procBut.Height = 25;
+                        procBut.Visible = true;
+                        procBut.Enabled = true;
+
+                        procBut.Click += (object sender_pr, EventArgs e_pr) => {
+                            if(procBut.Text == "In-Progress") {
+                                procBut.Text = "Done";
+                                procBut.FillColor = ColorTranslator.FromHtml("#38bf13");
+                                procBut.ForeColor = ColorTranslator.FromHtml("#1d7505");
+                            } else if(procBut.Text == "Done") {
+                                procBut.Text = "In-Progress";
+                                procBut.FillColor = ColorTranslator.FromHtml("#3498db");
+                                procBut.ForeColor = ColorTranslator.FromHtml("#1746d1");
+                            }
+                        };
+
+                        Guna2Button remBut = new Guna2Button();
+                        getPanel.Controls.Add(remBut);
+                        remBut.Name = "remBut" + curr;
+                        remBut.FillColor = ColorTranslator.FromHtml("#b51d29");
+                        remBut.Image = new Bitmap(Flow_Bugger.Properties.Resources.icons8_garbage_66);
+                        remBut.ForeColor = ColorTranslator.FromHtml("#1746d1");
+                        remBut.Font = new Font("Segoe UI Semibold", 9);
+                        remBut.Location = new Point(350, 167);
+                        remBut.BorderRadius = 5;
+                        remBut.BorderColor = ColorTranslator.FromHtml("#1730d1");
+                        remBut.Width = 41;
+                        remBut.Height = 34;
+                        remBut.Visible = true;
+                        remBut.Enabled = true;
+                        remBut.Anchor = AnchorStyles.Right;
+                        remBut.Anchor = AnchorStyles.Bottom;
+
+                        remBut.Click += (sender_rm, e_rm) => {                           
+                            remIsForm showRemForm = new remIsForm(curr,titleLab.Text);
+                            showRemForm.Show();
+                        };
         
                         Label priLab = new Label();
                         getPanel.Controls.Add(priLab);
@@ -263,7 +305,7 @@ namespace Flow_Bugger {
                         dateLab.ForeColor = Color.Gray;
                         dateLab.Font = new Font("Segoe UI", 9);
                         dateLab.Location = new Point(145, 160);
-                        dateLab.Text = "Deadlines";
+                        dateLab.Text = (guna2TextBox4.Text != "" ? "Deadlines" : "");
                         dateLab.Width = 58;
                         dateLab.Visible = true;
                         dateLab.Enabled = true;
@@ -271,6 +313,7 @@ namespace Flow_Bugger {
                         severitySelected.Clear();
                         prioritySelected.Clear();
                         guna2TextBox4.Clear();
+                        guna2TextBox3.Clear();
                     }
                     else {
                         MessageBox.Show("Please select priority of your issue.", "Flow Debugger System",
