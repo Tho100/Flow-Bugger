@@ -23,7 +23,13 @@ namespace Flow_Bugger {
             int toIntCurr = Convert.ToInt32(label1.Text);
             var getPanelPos = ((Guna2Panel)Form1.instance.flowLayoutPanel1.Controls["Pan" + toIntCurr]);
             getPanelPos.Dispose();
+            if (Form1.instance.flowLayoutPanel1.Controls.Count == 1) {
+                Form1.instance.label8.Visible = true;
+                Form1.instance.label1.Visible = true;
+                Form1.instance.guna2Button6.Visible = true;
+            }
             this.Close();
+
         }
 
         private void remIsForm_Load(object sender, EventArgs e) {

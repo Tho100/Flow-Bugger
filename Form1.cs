@@ -132,6 +132,9 @@ namespace Flow_Bugger {
         int curr = 0;
         int widthPan = 400;
 
+        int progCurr = 1;
+        int doneCurr = 0;
+
         private void guna2Button8_Click(object sender, EventArgs e) {
             try {
 
@@ -243,15 +246,20 @@ namespace Flow_Bugger {
                         procBut.Visible = true;
                         procBut.Enabled = true;
 
+                        label10.Text = progCurr.ToString();
                         procBut.Click += (object sender_pr, EventArgs e_pr) => {
                             if(procBut.Text == "In-Progress") {
                                 procBut.Text = "Done";
                                 procBut.FillColor = ColorTranslator.FromHtml("#38bf13");
                                 procBut.ForeColor = ColorTranslator.FromHtml("#1d7505");
+                                doneCurr++;
+                                label12.Text = doneCurr.ToString();
                             } else if(procBut.Text == "Done") {
                                 procBut.Text = "In-Progress";
                                 procBut.FillColor = ColorTranslator.FromHtml("#3498db");
                                 procBut.ForeColor = ColorTranslator.FromHtml("#1746d1");
+                                progCurr++;
+                                label10.Text = progCurr.ToString();
                             }
                         };
 
